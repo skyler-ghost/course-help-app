@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Course — University Course Connect Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../css/output.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="brand">
+      <i class="fa-solid fa-graduation-cap brand-mark" aria-hidden="true"></i>
+      <span class="brand-text">University Course<br>Connect Portal</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="search.html" class="nav-link is-active">Search Course</a>
+      <a href="courses.html" class="nav-link">Browse Courses</a>
+      <a href="lecturers.html" class="nav-link">Lecturers</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <span id="auth-slot"><a href="login.html" class="login-btn"><i class="fa-regular fa-user"></i>Login</a></span>
+      <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+    <a href="../index.html">Home</a>
+    <a href="search.html">Search Course</a>
+    <a href="courses.html">Browse Courses</a>
+    <a href="lecturers.html">Lecturers</a>
+  </nav>
+</header>
+
+<main class="page-shell">
+  <div class="page-title-row">
+    <span class="page-title-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+    <h1>Search Course</h1>
+  </div>
+  <p class="page-subtext">Enter the course code or name to find relevant results.</p>
+
+  <form id="search-form" class="search-box">
+    <label for="q" class="sr-only">Search for a course</label>
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    <input type="text" id="q" name="q" placeholder="CS101" autocomplete="off">
+    <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </form>
+
+  <p class="section-label">Popular Courses</p>
+  <div id="popular-chips" class="chip-group"></div>
+
+  <div id="results-wrap" style="margin-top: 28px;"></div>
+</main>
+
+<script src="../js/main.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
